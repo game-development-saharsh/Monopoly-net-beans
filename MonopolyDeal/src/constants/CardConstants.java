@@ -53,10 +53,17 @@ import java.util.Map;
  * @author Reena
  */
 public class CardConstants {
+    // display constants
+    final static public String TOP_COLOR = "topColor";
+    final static public String BOTTOM_COLOR = "bottomColor";
+    final static public String NAME = "name";
+    final static public String BODY1 = "body1";
+    final static public String BODY2 = "body2";
     // constants
 
     final static public String CARD_OBJECT_TYPE = "card";
     final static public String PLAYING_CARD_OBJECT_TYPE = "playing_card";
+    final static public String NAME_OF_DUMMY_PLAYING_CARD = "dummyCard";
     // source and destination
     final static public int DRAW_PILE = 1;
     final static public int PLAY_PILE = 2;
@@ -119,6 +126,7 @@ public class CardConstants {
     final static public String MONEY_4M = "M4";
     final static public String MONEY_5M = "M5";
     final static public String MONEY_10M = "M10";
+    
     final static public String ACTION_PASS_GO = "pass_go";
     final static public String ACTION_DEAL_BREAKER = "deal_breaker";
     final static public String ACTION_JUST_SAY_NO = "just_say_no";
@@ -135,6 +143,7 @@ public class CardConstants {
     final static public String ACTION_SKYBLUE_BROWN_RENT = "skyblue_brown_rent";
     final static public String ACTION_DOUBLE_THE_RENT = "double_the_rent";
     final static public String ACTION_ANY_CARD_RENT = "any_card_rent";
+    
     final static public String PROPERTY_GREEN = "green";
     final static public String PROPERTY_BLACK = "black";
     final static public String PROPERTY_SKYBLUE = "skyblue";
@@ -153,6 +162,47 @@ public class CardConstants {
     final static public String PROPERTY_PINK_ORANGE_WILD = "pink_orange_wild";
     final static public String PROPERTY_RED_YELLOW_WILD = "red_yellow_wild";
     final static public String PROPERTY_WILD_CARD = "property_wild_card";
+    final static public String[] NAMES_OF_CARDS = {
+        "prepareCardsOfMoneyOneMn",
+        "prepareCardsOfMoneyTwoMn",
+        "prepareCardsOfMoneyThreeMn",
+        "prepareCardsOfMoneyFourMn",
+        "prepareCardsOfMoneyFiveMn",
+        "prepareCardsOfMoneyTenMn",
+        "prepareCardsOfPassGoActionCard",
+        "prepareCardsOfDealBreakerActionCard",
+        "prepareCardsOfJustSayNoActionCard",
+        "prepareCardsOfSlyDealActionCard",
+        "prepareCardsOfForcedDealActionCard",
+        "prepareCardsOfBirthdayPaymentActionCard",
+        "prepareCardsOfDebtCollectorActionCard",
+        "prepareCardsOfHouseActionCard",
+        "prepareCardsOfHotelActionCard",
+        "prepareCardsOfPinkOrOrangeRentCard",
+        "prepareCardsOfBlueOrGreenRentCard",
+        "prepareCardsOfRedOrYellowRentCard",
+        "prepareCardsOfGreyOrBlackRentCard",
+        "prepareCardsOfSkyblueOrBrownRendCard",
+        "prepareCardsOfDoubleTheRentActionCard",
+        "prepareCardsOfAnyColorRentActionCard",
+        "prepareCardsOfAllColorPropertyWildCard",
+        "prepareCardsOfGreenSingleColorPropertyCard",
+        "prepareCardsOfBlackSingleColorPropertyCard",
+        "prepareCardsOfSkyblueSingleColorPropertyCard",
+        "prepareCardsOfPinkSingleColorPropertyCard",
+        "prepareCardsOfGreySingleColorPropertyCard",
+        "prepareCardsOfOrangeSingleColorPropertyCard",
+        "prepareCardsOfYellowSingleColorPropertyCard",
+        "prepareCardsOfRedSingleColorPropertyCard",
+        "prepareCardsOfBlueSingleColorPropertyCard",
+        "prepareCardsOfBrownSingleColorPropertyCard",
+        "prepareCardsOfGreenAndBlueDualColorPropertyCard",
+        "prepareCardsOfGreenAndBlackDualColorPropertyCard",
+        "prepareCardsOfGreyAndBlackDualColorPropertyCard",
+        "prepareCardsOfSkyblueAndBlackDualColorPropertyCard",
+        "prepareCardsOfSkyblueAndBrownDualColorPropertyCard",
+        "prepareCardsOfPinkAndOrangeDualColorPropertyCard",
+        "prepareCardsOfRedAndYellowDualColorPropertyCard"};
 
     static public Card fetchKindOfCardForName(String Name) {
         Map<String, Card> mapping = new HashMap<>();

@@ -8,7 +8,7 @@ public class SkyblueAndBlackDualColorPropertyCard extends DualColorPropertyCard 
 
 	@Override
 	public int getTypeOfColor() {
-		return typeOfCard;
+		return typeOfColours;
 	}
 	public SkyblueAndBlackDualColorPropertyCard() {
 		setValueInMn(4);

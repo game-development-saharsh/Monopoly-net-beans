@@ -8,7 +8,7 @@ public class GreyAndBlackDualColorPropertyCard extends DualColorPropertyCard {
 
 	@Override
 	public int getTypeOfColor() {
-		return typeOfCard;
+		return typeOfColours;
 	}
 	public GreyAndBlackDualColorPropertyCard() {
 		setValueInMn(2);

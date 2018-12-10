@@ -7,7 +7,7 @@ public class PinkAndOrangeDualColorPropertyCard extends DualColorPropertyCard {
 
 	@Override
 	public int getTypeOfColor() {
-		return typeOfCard;
+		return typeOfColours;
 	}
 	public PinkAndOrangeDualColorPropertyCard() {
 		setValueInMn(2);

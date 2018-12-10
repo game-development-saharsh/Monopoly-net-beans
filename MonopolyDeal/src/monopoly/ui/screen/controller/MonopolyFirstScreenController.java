@@ -16,7 +16,7 @@ import monopoly.beans.GameState;
 import monopoly.beans.Message;
 import monopoly.beans.Player;
 import monopoly.constants.MonopolyDealConstants;
-import monopoly.ui.screens.MonopolyDealHomeScreen;
+import monopoly.ui.screens.MonopolyDealHomeView;
 import monopoly.ui.screens.MonopolyFirstScreen;
 import monopoly.url.connector.MonopolyApplicationURLConnector;
 
@@ -25,13 +25,14 @@ import monopoly.url.connector.MonopolyApplicationURLConnector;
  * @author Reena
  */
 public class MonopolyFirstScreenController {
-
+    
     private String playerId = MonopolyDealConstants.EMPTY_STRING;
     private GameDetail gameMoves = null;
     private GameState gameState = null;
+
     public MonopolyFirstScreenController(MonopolyFirstScreen monopolyFirstScreen) {
     }
-
+    
     public char joinButtonAction(String userNameEntered) {
         char joinResult = ' ';
         MonopolyApplicationURLConnector monopolyApplicationURLConnector = new MonopolyApplicationURLConnector();
@@ -50,12 +51,15 @@ public class MonopolyFirstScreenController {
         }
         return joinResult;
     }
-
+    
     public void OpenHomeScreen() {
-        MonopolyDealHomeScreen monopolyDealHomeScreen = new MonopolyDealHomeScreen(gameMoves, gameState);
-        monopolyDealHomeScreen.setVisible(true);
+//        MonopolyDealHomeScreen monopolyDealHomeScreen = new MonopolyDealHomeScreen(gameMoves, gameState);
+//        monopolyDealHomeScreen.setVisible(true);
+        
+        MonopolyDealHomeView monopolyDealHomeView = new MonopolyDealHomeView(gameMoves, gameState);
+        monopolyDealHomeView.setVisible(true);
     }
-
+    
     public boolean findAnOpponent() {
         boolean opponentFound = false;
         if (getPlayerId() == null || getPlayerId().equals("")) {
@@ -76,7 +80,7 @@ public class MonopolyFirstScreenController {
         }
         return opponentFound;
     }
-
+    
     private boolean retryLogicToFindOpponent() {
         boolean opponentFound;
         MonopolyApplicationURLConnector monopolyApplicationURLConnector = new MonopolyApplicationURLConnector();
@@ -85,7 +89,7 @@ public class MonopolyFirstScreenController {
         opponentFound = processFindingMatchResponseFromServer(responoseFromServer);
         return opponentFound;
     }
-
+    
     private boolean processFindingMatchResponseFromServer(String responoseFromServer) {
         boolean isMatchFound = false;
         Gson gson = new Gson();
@@ -101,7 +105,7 @@ public class MonopolyFirstScreenController {
         }
         return isMatchFound;
     }
-
+    
     private int fetchMyPositionInGame(Game game) {
         int myPositionInGame = -1;
         List<Player> listOfPlayers = game.getListOfPlayers();
@@ -113,7 +117,7 @@ public class MonopolyFirstScreenController {
         }
         return myPositionInGame;
     }
-
+    
     private void fetchPlayerIdFromAdditionalData(Map<String, String> additionalStringMessage) {
         setPlayerId(additionalStringMessage.get(MonopolyDealConstants.PLAYER_ID));
     }

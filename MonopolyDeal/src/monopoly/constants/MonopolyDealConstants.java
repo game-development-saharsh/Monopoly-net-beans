@@ -9,8 +9,10 @@ package monopoly.constants;
  * @author Reena
  */
 public class MonopolyDealConstants {
+    //file constants
+    final public static String RELATIVE_PATH_OF_IMAGES = ".\\src\\images\\";
+    final public static String FILE_PNG_FORMAT = ".png";
     //URL
-
     final public static String LOCAL_HOSTNAME = "http://localhost:8080/";
     final public static String HEROKU_URL = "https://simplechatapp12.herokuapp.com/";
     final public static String SLASH = "/";
